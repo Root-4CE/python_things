@@ -2,12 +2,16 @@ import os
 
 #Privetstvie
 print('Hi! Today we gona fuck this machine! Lets create a new directory for it first! Set new fuking name of this shit:')
+dir_name = None
 dir_name = input()
 print(dir_name)
 
-while dir_name == 0:
-    print('Wrong things! Write again! Pisdec...')
-    dir_name(input())
+if dir_name is None and type(dir_name) != str:
+    while dir_name is None:
+        print('Error')
+        dir_name == input()
+else:
+    print('Finaly!')
 
 #Perduprejdenie
 
@@ -25,4 +29,4 @@ else:
     print ('OKeushki! Poehali!')
 
 os.mkdir(dir_name, mode=0o777)
-quit() 
+quit()

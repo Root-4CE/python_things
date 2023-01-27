@@ -1,0 +1,9 @@
+- name: First Play
+  hosts: all
+  #become: yes
+
+  tasks:
+    
+  - name: "Hello World"
+    debug:
+      msg: "Hello, World!!! I'm still alive!"
